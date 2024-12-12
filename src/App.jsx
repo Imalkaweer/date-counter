@@ -4,7 +4,7 @@ import CurrentDateComponent from "./CurrentDateComponent";
 
 const App = () => {
   const [step, setStep] = useState(1);
-  const [count, setCount] = useState(1);
+  const [count, setCount] = useState(0);
 
   const handleStepsIncrease = () => {
     setStep((s) => s + 1);
