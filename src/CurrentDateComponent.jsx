@@ -25,7 +25,7 @@ const CurrentDateComponent = ({ stepNo, countNo }) => {
   };
 
   return (
-    <div>
+    <>
       {countNo != 0 ? (
         <p>
           {noOfDays} days {handleFromAndAgo(stepNo, countNo)}{" "}
@@ -34,7 +34,7 @@ const CurrentDateComponent = ({ stepNo, countNo }) => {
       ) : (
         <p>Today is {new Date().toDateString()}</p>
       )}
-    </div>
+    </>
   );
 };
 
