@@ -1,4 +1,15 @@
+import { useEffect, useState } from "react";
+
 const CurrentDateComponent = ({ stepNo, countNo }) => {
+  const [noOfDays, setNoOfDays] = useState();
+  useEffect(() => {
+    const days = stepNo * countNo;
+    const transFormNumberIntoPositive = Math.abs(days);
+    if (countNo != 0) {
+      setNoOfDays(transFormNumberIntoPositive);
+    }
+  }, [countNo]);
+
   const handleCurrentDate = (stepParam, countParam) => {
     const currentDate = new Date();
     currentDate.setDate(currentDate.getDate() + stepParam * countParam);
@@ -17,7 +28,7 @@ const CurrentDateComponent = ({ stepNo, countNo }) => {
     <div>
       {countNo != 0 ? (
         <p>
-          {stepNo * countNo} days {handleFromAndAgo(stepNo, countNo)}{" "}
+          {noOfDays} days {handleFromAndAgo(stepNo, countNo)}{" "}
           {handleCurrentDate(stepNo, countNo)}
         </p>
       ) : (
