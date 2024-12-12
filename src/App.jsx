@@ -6,21 +6,21 @@ const App = () => {
   const [step, setStep] = useState(1);
   const [count, setCount] = useState(1);
 
-  function handleStepsIncrease() {
+  const handleStepsIncrease = () => {
     setStep((s) => s + 1);
-  }
+  };
 
-  function handleStepsDecrease() {
+  const handleStepsDecrease = () => {
     step > 1 ? setStep((s) => s - 1) : "";
-  }
+  };
 
-  function handleCountIncrease() {
+  const handleCountIncrease = () => {
     setCount((c) => c + 1);
-  }
+  };
 
-  function handleCountDecrease() {
+  const handleCountDecrease = () => {
     setCount((c) => c - 1);
-  }
+  };
 
   return (
     <div className="content">
