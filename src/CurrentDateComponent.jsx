@@ -12,7 +12,7 @@ const CurrentDateComponent = ({ stepNo, countNo }) => {
 
   const handleCurrentDate = (stepParam, countParam) => {
     const currentDate = new Date();
-    currentDate.setDate(currentDate.getDate() + stepParam * countParam);
+    currentDate.setDate(currentDate.getDate() + noOfDays);
     return currentDate.toDateString();
   };
 
